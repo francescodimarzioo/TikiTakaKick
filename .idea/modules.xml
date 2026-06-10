@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/TikiTakaKick.iml" filepath="$PROJECT_DIR$/.idea/TikiTakaKick.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tikitakakick.iml" filepath="$PROJECT_DIR$/tikitakakick.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tikitakakick.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tikitakakick.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tikitakakick.test.iml" filepath="$PROJECT_DIR$/.idea/modules/tikitakakick.test.iml" />
+    </modules>
+  </component>
+</project>
