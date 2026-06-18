@@ -98,8 +98,8 @@ public class Match {
      *
      * @return oggetto MatchResult con i gol finali
      */
-    public MatchEvent getResult() {
-        return new MatchEvent(homeGoals, awayGoals);
+    public MatchResult getResult() {
+        return new MatchResult(homeGoals, awayGoals);
     }
 
     public Team getHome() { return home; }
