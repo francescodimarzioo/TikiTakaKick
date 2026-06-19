@@ -36,16 +36,37 @@ public class Statistics {
     public int getStamina() { return stamina; }
 
     /**
-     * Migliora tutte le statistiche della quantità specificata.
-     * Nessun attributo può superare il valore massimo di 99.
+     * Migliora la velocità del giocatore della quantità specificata.
      *
-     * @param amount quantità da aggiungere a ciascuna statistica
+     * @param amount quantità da aggiungere alla velocità
      */
-    public void improve(int amount) {
-        speed = Math.min(99, speed + amount);
-        shooting = Math.min(99, shooting + amount);
-        passing = Math.min(99, passing + amount);
-        defense = Math.min(99, defense + amount);
-        stamina = Math.min(99, stamina + amount);
-    }
+    public void improveSpeed(int amount) { speed = Math.min(99, speed + amount); }
+
+    /**
+     * Migliora la capacità di tiro del giocatore della quantità specificata.
+     *
+     * @param amount quantità da aggiungere al tiro
+     */
+    public void improveShooting(int amount) { shooting = Math.min(99, shooting + amount); }
+
+    /**
+     * Migliora la capacità di passaggio del giocatore della quantità specificata.
+     *
+     * @param amount quantità da aggiungere al passaggio
+     */
+    public void improvePassing(int amount) { passing = Math.min(99, passing + amount); }
+
+    /**
+     * Migliora la capacità difensiva del giocatore della quantità specificata.
+     *
+     * @param amount quantità da aggiungere alla difesa
+     */
+    public void improveDefense(int amount) { defense = Math.min(99, defense + amount); }
+
+    /**
+     * Migliora la resistenza fisica del giocatore della quantità specificata.
+     *
+     * @param amount quantità da aggiungere alla resistenza
+     */
+    public void improveStamina(int amount) { stamina = Math.min(99, stamina + amount); }
 }
