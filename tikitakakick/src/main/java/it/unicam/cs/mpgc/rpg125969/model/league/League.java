@@ -60,7 +60,7 @@ public class League {
     public String getName() { return name; }
     public List<Team> getTeams() { return teams; }
     public List<Matchday> getMatchdays() { return matchdays; }
-    public LeagueTable getStandings() { return leagueTable; }
+    public LeagueTable getLeagueTable() { return leagueTable; }
     public int getCurrentMatchday() { return currentMatchday; }
 
     @Override
