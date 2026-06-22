@@ -2,6 +2,7 @@ package it.unicam.cs.mpgc.rpg125969.persistence;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 import it.unicam.cs.mpgc.rpg125969.model.league.League;
 
 import java.io.IOException;
@@ -54,6 +55,7 @@ public class JsonSaveManager implements SaveManager {
             throw new IOException("File di salvataggio non trovato: " + fileName);
         }
         String json = Files.readString(filePath);
-        return gson.fromJson(json, League.class);
+        return gson.fromJson(json, new com.google.gson.reflect.TypeToken<League>() {
+        }.getType());
     }
 }
