@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 
 /**
  * Punto di ingresso dell'applicazione TikiTakaKick.
- * Inizializza la finestra principale e carica la schermata del menu.
+ * Inizializza la finestra principale e gestisce la navigazione tra le schermate.
  */
 public class MainApp extends Application {
 
@@ -24,8 +24,17 @@ public class MainApp extends Application {
         primaryStage.setWidth(900);
         primaryStage.setHeight(600);
         primaryStage.setResizable(false);
-        showMainMenu();
+        showTeamSelectionView();
         primaryStage.show();
+    }
+
+    /**
+     * Mostra la schermata di selezione della squadra.
+     */
+    public static void showTeamSelectionView() {
+        TeamSelectionView view = new TeamSelectionView();
+        Scene scene = new Scene(view.getView(), 900, 600);
+        primaryStage.setScene(scene);
     }
 
     /**
@@ -38,7 +47,7 @@ public class MainApp extends Application {
     }
 
     /**
-     * Mostra la schermata di gestione della rosa e allenamento.
+     * Mostra la schermata di gestione della rosa.
      */
     public static void showRosterView() {
         RosterView rosterView = new RosterView();
