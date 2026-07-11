@@ -26,8 +26,24 @@ tattiche durante le partite simulate in tempo reale.
 - Scelta della squadra tra Juventus, Inter, Milan, Napoli e Roma
 - Allenamento dei giocatori per migliorarne le statistiche
 - Partite simulate in tempo reale con eventi casuali
-- Cambio tattica durante la partita
-- Classifica aggiornata automaticamente
+- Cambio tattica durante la partita (Attacco, Bilanciato, Difesa)
+- Classifica aggiornata automaticamente dopo ogni partita
+
+## Architettura
+
+Il progetto segue il pattern MVC con i seguenti package:
+- **model/** — entità di dominio (player, team, match, league, training)
+- **controller/** — logica di gioco (MatchController, LeagueController, TrainingController)
+- **view/** — interfaccia grafica JavaFX
+- **persistence/** — salvataggio JSON tramite interfaccia SaveManager
+- **util/** — GameContext (Singleton) e TeamFactory (Factory)
+
+## Pattern di progettazione
+
+- **Singleton** — GameContext
+- **Factory** — TeamFactory
+- **Strategy** — TacticalChoice
+- **Observer** — Timeline JavaFX per aggiornamento UI
 
 ## Tecnologie
 
@@ -35,7 +51,7 @@ tattiche durante le partite simulate in tempo reale.
 - JavaFX 21
 - Gson 2.10.1
 - JUnit 5
-- Gradle
+- Gradle 9
 
 ## Dichiarazione uso AI
 
