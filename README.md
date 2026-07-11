@@ -17,6 +17,7 @@ tattiche durante le partite simulate in tempo reale.
 ## Avvio
 
 ```bash
+cd TikiTakaKick
 ./gradlew build
 ./gradlew run
 ```
